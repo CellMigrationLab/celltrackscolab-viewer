@@ -11,6 +11,82 @@ A simple plugin to visualize tracks stored in the CellTracksColab format
 
 ----------------------------------
 
+# CellTracksColab Viewer: Alpha Testing
+
+Thank you for participating in the alpha testing of the **CellTracksColab Viewer** plugin! Please follow the steps below to install and test the plugin in Napari.
+
+## Prerequisites
+
+Before installing the plugin, make sure you have the following set up:
+
+1. **Python 3.7 or later**: You can download it from the official [Python website](https://www.python.org/).
+2. **Napari**: If you don’t already have Napari installed, you can install it via `pip` or use Conda to manage your environment.
+
+   To install Napari with `pip`:
+
+   ```bash
+   pip install "napari[all]"
+   ```
+
+   Alternatively, you can install it using Conda (recommended for managing Python environments):
+
+   ```bash
+   conda create -n napari-env python=3.9
+   conda activate napari-env
+   pip install napari
+   ```
+
+## Step 1: Clone the Plugin Repository
+
+1. Open a terminal or command prompt.
+2. Clone the plugin repository from GitHub:
+
+   ```bash
+   git clone https://github.com/CellMigrationLab/celltrackscolab-viewer.git
+   cd celltrackscolab-viewer
+   ```
+
+This will create a local copy of the plugin repository on your computer.
+
+## Step 2: Install the Plugin Locally
+
+1. After cloning the repository, navigate to the plugin folder (if not already there).
+2. Install the plugin in editable mode:
+
+   ```bash
+   pip install -e .
+   ```
+
+   The `-e` flag installs the plugin in "editable" mode, allowing you to make changes and test them immediately without needing to reinstall the plugin.
+
+## Step 3: Run Napari and Test the Plugin
+
+1. Once the plugin is installed, you can start Napari by typing:
+
+   ```bash
+   napari
+   ```
+
+2. In Napari, go to the **Plugins** menu and look for **CellTracksColab Viewer**. From here, you can:
+   - **Load CSV data**: Use the plugin to load track data from CSV files.
+   - **Visualize Tracks**: Select filenames and visualize the tracks in the Napari viewer.
+   - **Load TIFF images (optional)**: You can load corresponding microscopy TIFF images and overlay them with track data.
+
+## Step 4: Reporting Bugs and Providing Feedback
+
+If you encounter any issues or have feedback, please report them by creating an issue in the GitHub repository:
+
+1. Go to the [Issues section](https://github.com/CellMigrationLab/celltrackscolab-viewer/issues) of the repository.
+2. Create a new issue, providing as much detail as possible, including:
+   - Steps to reproduce the issue.
+   - Screenshots or error messages (if applicable).
+   - Napari version and operating system (Windows, macOS, or Linux).
+
+Thank you for your time and feedback!
+
+
+
+
 This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
 
 <!--
