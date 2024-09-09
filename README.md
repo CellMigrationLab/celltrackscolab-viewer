@@ -88,6 +88,7 @@ If you encounter any issues or have feedback, please report them by creating an 
 Thank you for your time and feedback!
 
 
+## Step 5: Installation  instructions when ready
 
 
 This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
