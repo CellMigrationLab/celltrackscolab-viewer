@@ -68,9 +68,12 @@ This will create a local copy of the plugin repository on your computer.
    ```
 
 2. In Napari, go to the **Plugins** menu and look for **CellTracksColab Viewer**. From here, you can:
-   - **Load CSV data**: Use the plugin to load track data from CSV files.
-   - **Visualize Tracks**: Select filenames and visualize the tracks in the Napari viewer.
+   - **Load CSV data**: Use the plugin to load track data from CSV files. Here you should open the **merged_Spots.csv** file
    - **Load TIFF images (optional)**: You can load corresponding microscopy TIFF images and overlay them with track data.
+   - **Visualize Tracks**: Select filenames and visualize the tracks in the Napari viewer.
+
+3. test data is available [here](https://zenodo.org/records/11286110)
+
 
 ## Step 4: Reporting Bugs and Providing Feedback
 
