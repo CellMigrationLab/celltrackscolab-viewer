@@ -1,17 +1,15 @@
-__version__ = "0.0.1"
+# src/celltrackscolabviewer/__init__.py
 
-from ._reader import napari_get_reader
+__version__ = "0.1.0"
+
+# Importing the widgets for loading and visualizing
+from ._widget import load_csv_widget, visualize_widget
 from ._sample_data import make_sample_data
-from ._widget import ExampleQWidget, ImageThreshold, threshold_autogenerate_widget, threshold_magic_widget
-from ._writer import write_multiple, write_single_image
 
+# Update __all__ to reflect the correct widgets
 __all__ = (
-    "napari_get_reader",
-    "write_single_image",
-    "write_multiple",
+    "load_csv_widget",
+    "visualize_widget",
     "make_sample_data",
-    "ExampleQWidget",
-    "ImageThreshold",
-    "threshold_autogenerate_widget",
-    "threshold_magic_widget",
 )
+

@@ -1,57 +1,22 @@
 name: celltrackscolab-viewer
 display_name: CellTracksColab Viewer
-# use 'hidden' to remove plugin from napari hub search results
 visibility: public
-# see https://napari.org/stable/plugins/manifest.html for valid categories
-categories: ["Annotation", "Segmentation", "Acquisition"]
+categories: ["Annotation", "Visualization"]
+
 contributions:
   commands:
-    - id: celltrackscolab-viewer.get_reader
-      python_name: celltrackscolabviewer._reader:napari_get_reader
-      title: Open data with CellTracksColab Viewer
-    - id: celltrackscolab-viewer.write_multiple
-      python_name: celltrackscolabviewer._writer:write_multiple
-      title: Save multi-layer data with CellTracksColab Viewer
-    - id: celltrackscolab-viewer.write_single_image
-      python_name: celltrackscolabviewer._writer:write_single_image
-      title: Save image data with CellTracksColab Viewer
-    - id: celltrackscolab-viewer.make_sample_data
-      python_name: celltrackscolabviewer._sample_data:make_sample_data
-      title: Load sample data from CellTracksColab Viewer
-    - id: celltrackscolab-viewer.make_container_widget
-      python_name: celltrackscolabviewer:ImageThreshold
-      title: Make threshold Container widget
-    - id: celltrackscolab-viewer.make_magic_widget
-      python_name: celltrackscolabviewer:threshold_magic_widget
-      title: Make threshold magic widget
-    - id: celltrackscolab-viewer.make_function_widget
-      python_name: celltrackscolabviewer:threshold_autogenerate_widget
-      title: Make threshold function widget
-    - id: celltrackscolab-viewer.make_qwidget
-      python_name: celltrackscolabviewer:ExampleQWidget
-      title: Make example QWidget
-  readers:
-    - command: celltrackscolab-viewer.get_reader
-      accepts_directories: false
-      filename_patterns: ['*.npy']
-  writers:
-    - command: celltrackscolab-viewer.write_multiple
-      layer_types: ['image*','labels*']
-      filename_extensions: []
-    - command: celltrackscolab-viewer.write_single_image
-      layer_types: ['image']
-      filename_extensions: ['.npy']
-  sample_data:
-    - command: celltrackscolab-viewer.make_sample_data
-      display_name: CellTracksColab Viewer
-      key: unique_id.1
+    - id: celltrackscolab-viewer.load_csv_widget  # Command for loading the CSV file
+      python_name: celltrackscolabviewer._widget:load_csv_widget
+      title: Load CSV with CellTracksColab Viewer
+
+    - id: celltrackscolab-viewer.visualize_widget  # Command for visualizing tracks
+      python_name: celltrackscolabviewer._widget:visualize_widget
+      title: Visualize Tracks with CellTracksColab Viewer
+
   widgets:
-    - command: celltrackscolab-viewer.make_container_widget
-      display_name: Container Threshold
-    - command: celltrackscolab-viewer.make_magic_widget
-      display_name: Magic Threshold
-    - command: celltrackscolab-viewer.make_function_widget
-      autogenerate: true
-      display_name: Autogenerate Threshold
-    - command: celltrackscolab-viewer.make_qwidget
-      display_name: Example QWidget
+    - command: celltrackscolab-viewer.load_csv_widget  # Widget for loading CSV
+      display_name: Load CSV
+
+    - command: celltrackscolab-viewer.visualize_widget  # Widget for visualizing tracks
+      display_name: Visualize Tracks
+
